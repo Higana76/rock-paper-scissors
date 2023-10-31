@@ -1,9 +1,9 @@
-let computerChoice = "";
-let playerChoice = "";
+let computerChoice;
+let playerChoice;
 let userScore = 0;
 let computerScore = 0;
 let scoreboard;
-let gameResult = "";
+let gameResult;
 
 
 function getComputerChoice() {
