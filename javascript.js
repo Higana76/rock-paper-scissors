@@ -1,5 +1,9 @@
 let computerChoice = "dead";
 let playerChoice = "unpicked";
+let userScore = 0;
+let computerScore = 0;
+let scoreboard = "User: " + userScore + "!     Computer: " + computerScore + "!";
+let gameResult = "";
 
 
 function getComputerChoice() {
@@ -23,61 +27,78 @@ function getComputerChoice() {
 function getPlayerChoice() {
     playerChoice = prompt("Type rock/paper/scissors", "paper").toLowerCase();
     console.log(playerChoice);
-    // if (playerChoice === "rock") {
-    //     playerResult = "Valid Input";
-    // }
-    // else if (playerChoice === "paper") {
-    //     playerResult = "Valid Input";
-    // }
-    // else if (playerChoice === "scissors") {
-    //     playerResult = "Valid Input";
-    // }
-    // else {
-    //     playerResult = "Invalid Input";
-    // }
-    // console.log(playerResult);
 }
 
 function playRound (playerSelection, computerSelection) {
     playerSelection = getPlayerChoice();
     computerSelection = getComputerChoice();
     if ((playerChoice === "rock") && (computerChoice === "scissors")) {
-        return "You Win! Rock beats Scissors!";
+        userScore = userScore + 1;
+        gameResult = "You Win! Rock beats Scissors!";
     }
 
     else if ((playerChoice === "scissors") && (computerChoice === "paper")) {
-        return "You Win! Scissors beats Paper!";
+        userScore = userScore + 1;
+        gameResult = "You Win! Scissors beats Paper!";
     }
 
     else if ((playerChoice === "paper") && (computerChoice === "rock")) {
-        return "You Win! Paper beats Rock!";
+        userScore = userScore + 1;
+        gameResult = "You Win! Paper beats Rock!";
     }
 
-    if ((playerChoice === "scissors") && (computerChoice === "rock")) {
-        return "You Lose! Rock beats Scissors!";
+    else if ((playerChoice === "scissors") && (computerChoice === "rock")) {
+        computerScore = computerScore + 1;
+        gameResult = "You Lose! Rock beats Scissors!";
     }
 
     else if ((playerChoice === "paper") && (computerChoice === "scissors")) {
-        return "You Lose! Scissors beats Paper!";
+        computerScore = computerScore + 1;
+        gameResult = "You Lose! Scissors beats Paper!";
     }
 
     else if ((playerChoice === "rock") && (computerChoice === "paper")) {
-        return "You Lose! Paper beats Rock!";
+        computerScore = computerScore + 1;
+        gameResult = "You Lose! Paper beats Rock!";
     }
 
     else if ((playerChoice === "rock") && (computerChoice === "rock")) {
-        return "Draw!";
+        gameResult = "Draw!";
     }
 
     else if ((playerChoice === "paper") && (computerChoice === "paper")) {
-        return "Draw!";
+        gameResult = "Draw!";
     }
 
     else if ((playerChoice === "scissors") && (computerChoice === "scissors")) {
-        return "Draw!";
+        gameResult = "Draw!";
     }
 
     else {
-        return "Input Error!";
+        gameResult = "Input Error!";
     }
+}
+
+function game() {
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+    playRound (playerSelection, computerSelection);
+    console.log(scoreboard);
+    console.log(gameResult);
+
+    playRound (playerSelection, computerSelection);
+    console.log(scoreboard);
+    console.log(gameResult);
+
+    playRound (playerSelection, computerSelection);
+    console.log(scoreboard);
+    console.log(gameResult);
+
+    playRound (playerSelection, computerSelection);
+    console.log(scoreboard);
+    console.log(gameResult);
+
+    playRound (playerSelection, computerSelection);
+    console.log(scoreboard);
+    console.log(gameResult);
 }
