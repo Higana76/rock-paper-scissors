@@ -2,7 +2,7 @@ let computerChoice = "";
 let playerChoice = "";
 let userScore = 0;
 let computerScore = 0;
-let scoreboard = "User: " + userScore + "!     Computer: " + computerScore + "!";
+let scoreboard;
 let gameResult = "";
 
 
@@ -82,22 +82,27 @@ function game() {
     playerSelection = getPlayerChoice;
     computerSelection = getComputerChoice;
     playRound (playerSelection, computerSelection);
+    scoreboard = "User: " + userScore + "!     Computer: " + computerScore + "!";
+    console.log(scoreboard);
+    console.log(gameResult);
+    
+    playRound (playerSelection, computerSelection);
+    scoreboard = "User: " + userScore + "!     Computer: " + computerScore + "!";
+    console.log(scoreboard);
+    console.log(gameResult);
+    
+    playRound (playerSelection, computerSelection);
+    scoreboard = "User: " + userScore + "!     Computer: " + computerScore + "!";
+    console.log(scoreboard);
+    console.log(gameResult);
+    
+    playRound (playerSelection, computerSelection);
+    scoreboard = "User: " + userScore + "!     Computer: " + computerScore + "!";
     console.log(scoreboard);
     console.log(gameResult);
 
     playRound (playerSelection, computerSelection);
-    console.log(scoreboard);
-    console.log(gameResult);
-
-    playRound (playerSelection, computerSelection);
-    console.log(scoreboard);
-    console.log(gameResult);
-
-    playRound (playerSelection, computerSelection);
-    console.log(scoreboard);
-    console.log(gameResult);
-
-    playRound (playerSelection, computerSelection);
+    scoreboard = "User: " + userScore + "!     Computer: " + computerScore + "!";
     console.log(scoreboard);
     console.log(gameResult);
 }
