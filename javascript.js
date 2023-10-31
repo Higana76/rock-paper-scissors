@@ -1,5 +1,5 @@
-let computerChoice = "dead";
-let playerChoice = "unpicked";
+let computerChoice = "";
+let playerChoice = "";
 let userScore = 0;
 let computerScore = 0;
 let scoreboard = "User: " + userScore + "!     Computer: " + computerScore + "!";
@@ -17,7 +17,6 @@ function getComputerChoice() {
     else if (x === 3){
         computerChoice = "scissors";
     }
-
     else {
         computerChoice = "broken";
     }
@@ -80,8 +79,8 @@ function playRound (playerSelection, computerSelection) {
 }
 
 function game() {
-    playerSelection = getPlayerChoice();
-    computerSelection = getComputerChoice();
+    playerSelection = getPlayerChoice;
+    computerSelection = getComputerChoice;
     playRound (playerSelection, computerSelection);
     console.log(scoreboard);
     console.log(gameResult);
