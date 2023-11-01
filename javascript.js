@@ -106,3 +106,9 @@ function game() {
     console.log(scoreboard);
     console.log(gameResult);
 }
+
+function reset() {
+    userScore = 0;
+    computerScore = 0;
+    console.log("Scores have been reset!")
+}
